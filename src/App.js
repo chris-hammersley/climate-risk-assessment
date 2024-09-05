@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { AlertCircle, ArrowRight, CheckCircle } from 'lucide-react';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 const questions = [
   {
@@ -50,19 +48,18 @@ const ClimateRiskAssessment = () => {
 
   if (showResults) {
     return (
-      <div className="p-6 bg-white rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-4">Assessment Results</h2>
-        <Alert>
-          <AlertCircle className="h-4 w-4" />
-          <AlertTitle>Recommendation</AlertTitle>
-          <AlertDescription>{getRecommendation()}</AlertDescription>
-        </Alert>
-        <div className="mt-4">
-          <h3 className="text-lg font-semibold mb-2">Next Steps:</h3>
-          <ul className="list-disc pl-5">
+      <div style={{ padding: '24px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+        <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>Assessment Results</h2>
+        <div style={{ padding: '16px', backgroundColor: '#f0f0f0', borderRadius: '4px', marginBottom: '16px' }}>
+          <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>Recommendation</h3>
+          <p>{getRecommendation()}</p>
+        </div>
+        <div>
+          <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>Next Steps:</h3>
+          <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
             <li>Download our industry-specific case study</li>
-            <li><a href="https://www.planette.ai/forecasts">Explore our forecast details page</a></li>
-            <li><a href="https://www.planette.ai/contact-us">Contact us for a discovery call and demo</a></li>
+            <li>Explore our forecast details page</li>
+            <li>Contact us for a personalized consultation</li>
           </ul>
         </div>
       </div>
@@ -70,19 +67,30 @@ const ClimateRiskAssessment = () => {
   }
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-4">5-Minute Climate Risk Assessment</h2>
-      <p className="mb-4">Question {currentQuestion + 1} of {questions.length}</p>
-      <h3 className="text-lg font-semibold mb-2">{questions[currentQuestion].text}</h3>
-      <div className="space-y-2">
+    <div style={{ padding: '24px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+      <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '16px' }}>5-Minute Climate Risk Assessment</h2>
+      <p style={{ marginBottom: '16px' }}>Question {currentQuestion + 1} of {questions.length}</p>
+      <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>{questions[currentQuestion].text}</h3>
+      <div>
         {questions[currentQuestion].options.map((option, index) => (
           <button
             key={index}
-            className="w-full p-2 text-left border rounded hover:bg-gray-100 flex items-center justify-between"
+            style={{
+              width: '100%',
+              padding: '8px',
+              textAlign: 'left',
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              marginBottom: '8px',
+              cursor: 'pointer',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
             onClick={() => handleAnswer(option)}
           >
             <span>{option}</span>
-            <ArrowRight className="h-4 w-4" />
+            <span>→</span>
           </button>
         ))}
       </div>
