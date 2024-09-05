@@ -61,8 +61,8 @@ const ClimateRiskAssessment = () => {
           <h3 className="text-lg font-semibold mb-2">Next Steps:</h3>
           <ul className="list-disc pl-5">
             <li>Download our industry-specific case study</li>
-            <li>Explore our forecast details page</li>
-            <li>Contact us for a personalized consultation</li>
+            <li><a href="https://www.planette.ai/forecasts">Explore our forecast details page</a></li>
+            <li><a href="https://www.planette.ai/contact-us">Contact us for a discovery call and demo</a></li>
           </ul>
         </div>
       </div>
