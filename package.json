@@ -35,5 +35,8 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "resolutions": {
+  "babel-eslint": "^10.1.0"
+}
 }
