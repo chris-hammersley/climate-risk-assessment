@@ -3,23 +3,23 @@ import React, { useState } from 'react';
 const questions = [
   {
     text: "What industry is your business in?",
-    options: ["Agriculture", "Energy", "Manufacturing", "Retail", "Other"]
+    options: ["Agriculture", "Energy", "Manufacturing", "Retail", "Other"],
   },
   {
     text: "Do you currently use any weather or climate forecasting data?",
-    options: ["Yes, regularly", "Sometimes", "No", "Not sure"]
+    options: ["Yes, regularly", "Sometimes", "No", "Not sure"],
   },
   {
     text: "How often do extreme weather events impact your operations?",
-    options: ["Frequently", "Occasionally", "Rarely", "Never"]
+    options: ["Frequently", "Occasionally", "Rarely", "Never"],
   },
   {
     text: "Which weather events are you most concerned about?",
-    options: ["Heatwaves", "Floods", "Hurricanes", "Droughts", "Other"]
+    options: ["Heatwaves", "Floods", "Hurricanes", "Droughts", "Other"],
   },
   {
     text: "How prepared do you feel for future climate-related risks?",
-    options: ["Very prepared", "Somewhat prepared", "Not very prepared", "Not at all prepared"]
+    options: ["Very prepared", "Somewhat prepared", "Not very prepared", "Not at all prepared"],
   }
 ];
 
@@ -58,8 +58,8 @@ const ClimateRiskAssessment = () => {
           <h3 style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>Next Steps:</h3>
           <ul style={{ paddingLeft: '20px', listStyleType: 'disc' }}>
             <li>Download our industry-specific case study</li>
-            <li>Explore our forecast details page</li>
-            <li>Contact us for a personalized consultation</li>
+            <li><a href="https://www.planette.ai/forecasts">Explore our forecast details</a></li>
+            <li><a href="https://www.planette.ai/contact-us">Contact us for a personalized consultation</a></li>
           </ul>
         </div>
       </div>
